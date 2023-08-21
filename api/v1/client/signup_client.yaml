@@ -1,0 +1,25 @@
+post:
+  tags: 
+    -  Client account
+  summary: Create client account
+  description: |
+    Create a new client account on your platform instance database.
+
+    On success, a `client_token` is returned, which is used to update or delete a client account.
+  operationId: createClient
+  requestBody:
+    description: New client to add.
+    required: true
+    content:
+      application/json:
+        schema:
+          allOf:
+            - $ref: schemas/client.yaml
+            - $ref: schemas/custom_data.yaml
+  responses:
+    200:
+      description: Created
+    400:
+      description: Bad Request (mandatory fields missing or invalid value)
+    409:
+      description: Conflict (user_id already exists)

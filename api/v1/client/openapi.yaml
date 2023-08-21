@@ -1,0 +1,26 @@
+openapi: "3.1.0"
+info:
+    version: 1.0.0 #version of this document
+    title: Client API
+    description: |
+      Collection of Client REST APIs.
+servers:
+  - url: https://api.staging.{platform_id}.platform.io
+    description: The URL for your staging environment.
+    variables:
+      platform_id:
+        default: 'platform_id'
+        description: |
+          The `platform_id` provided to you during your onboarding, which identifies your deployments.
+tags:
+  - name: Client account
+    description: Endpoints to handle clients
+security:
+  - Bearer: []
+components: 
+  securitySchemes:
+    Bearer: { $ref: ../bearer.yaml }
+paths:
+  /v1/client/signup: { $ref: signup_client.yaml }
+  /v1/client/login: { $ref: login_client.yaml }
+  /v1/client/{user_id}: { $ref: user_id/update_delete_client.yaml }

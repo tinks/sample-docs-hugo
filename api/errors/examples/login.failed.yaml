@@ -1,0 +1,11 @@
+value: {
+  "errors": [
+    {
+      "id": "21fc115e-08c8-45af-8f0b-271f7d6fe254",
+      "title": "Login failed.",
+      "code": "errors.login.failed",
+      "detail": "Password and/or user incorrect.",
+      "status": 401
+    }
+  ]
+}

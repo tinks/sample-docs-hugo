@@ -1,0 +1,20 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sample documentation – Client account API</title><link>/api/client/</link><description>Recent content in Client account API on Sample documentation</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 19 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="/api/client/index.xml" rel="self" type="application/rss+xml"/><item><title>Api: Getting started</title><link>/api/client/client-get-started/</link><pubDate>Sat, 19 Aug 2023 00:00:00 +0000</pubDate><guid>/api/client/client-get-started/</guid><description/></item><item><title>Api: API reference</title><link>/api/client/client-api-ref/</link><pubDate>Sat, 19 Aug 2023 00:00:00 +0000</pubDate><guid>/api/client/client-api-ref/</guid><description>
+&lt;p>Try out the client account API on your staging environment.&lt;/p>
+&lt;rapi-doc id='rapi-doc-el'
+spec-url = '/api/v1/client/openapi.yaml'
+show-info = 'false'
+show-header = 'false'
+render-style = 'view'
+layout = 'column'
+schema-description-expanded = 'true'
+theme = 'light'
+allow-spec-url-load = 'false'
+allow-spec-file-load = 'false'
+allow-spec-file-download = 'true'
+primary-color = '#313C73'
+persist-auth = 'true'
+fetch-credentials = 'omit'
+allow-try = 'true'
+default-schema-tab = 'schema'
+>
+&lt;/rapi-doc></description></item></channel></rss>

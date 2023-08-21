@@ -1,0 +1,29 @@
+type: object
+properties:
+  errors:
+    type: array
+    items: 
+      type: object
+      required:
+        - id
+        - title
+        - code
+      properties:
+        id:
+          type: string
+          description: A unique identifier for the reported error.
+        title:
+          type: string
+          description: A human readable description of the error.
+        code:
+          type: string
+          description: The code identifying the type of error, which can be used for localisation purposes.
+        detail:
+          type: string
+          description: A more detailed description of the error. For example, indicating the specific field which has an invalid value.
+        source:
+          type: string
+          description: Information of the location where the error occurred.
+        status:
+          type: integer
+          description: The HTTP status code.

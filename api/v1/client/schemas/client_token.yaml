@@ -1,0 +1,5 @@
+type: object
+properties:
+  client_token:
+    type: string
+    description: The client token received when the client logged in or signed up.

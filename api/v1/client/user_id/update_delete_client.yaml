@@ -1,0 +1,92 @@
+parameters:
+  - name: user_id
+    in: path
+    description: The user ID recorded for the client in your platform instance database
+    required: true
+    schema:
+      type: string
+  - name: Client-Token
+    in: header
+    description: The `client_token` received when the client logged in or signed up.
+    required: true
+    schema:
+      type: string
+put:
+  tags: 
+    -  Client account
+  summary: Update client account
+  description: | 
+    Update an existing client account on your platform instance database.
+
+    > &#x26a0;&#xfe0f; You can only update a client account after the client has successfully logged in.
+
+    > &#x26a0;&#xfe0f; Sending null for a field clears the value. Required fields cannot be cleared. 
+    > Undefined fields are left unchanged.
+  operationId: updateClient
+  requestBody:
+    description: The client to update.
+    required: true
+    content:
+      application/json:
+        schema:
+          allOf: 
+            - $ref: ../schemas/existing_client.yaml
+            - $ref: ../schemas/custom_data.yaml
+  responses:
+    200:
+      description: Success
+    400:
+      description: Bad Request (invalid value)
+    401:
+      description: Unauthorized
+    403:
+      description: Forbidden
+      content: 
+        application/json: 
+          examples: 
+            permissionDenied: 
+              value: {
+                "error": {
+                  "title": "Permission denied",
+                  "status": "403"
+                }
+              }
+    404:
+      description: Does Not Exist
+delete:
+  tags: 
+    -  Client account
+  summary: Delete client account
+  description: |
+    This endpoint allows you to delete a client account, when the client requests it through your web application. 
+    In the database, the client's personal information is deleted and only their `user_id` is kept for relational database purposes.
+  operationId: deleteClient
+  requestBody: 
+    content: 
+      application/json: 
+        schema: 
+          properties: 
+            reason:
+              type: string
+              description: The reason for deleting the client
+  responses:
+    204:
+      description: Success
+    400:
+      description: Validation failure (corrupted token)
+    403:
+      description: Forbidden
+      content: 
+        application/json: 
+          examples: 
+            permissionDenied: 
+              value: {
+                "error": {
+                  "title": "Permission denied",
+                  "status": "403"
+                }
+              }
+    404:
+      description: User not found
+    500:
+      description: Internal server error
