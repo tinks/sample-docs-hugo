@@ -1,6 +1,6 @@
 baseURL = "/sample-docs/"
 title = "Sample documentation"
-relativeURLs = true
+# relativeURLs = true
 
 [markup]
   [markup.goldmark]
