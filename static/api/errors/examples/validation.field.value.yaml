@@ -4,8 +4,8 @@ value: {
       "id": "21fc115e-08c8-45af-8f0b-271f7d6fe254",
       "title": "Field is invalid",
       "code": "errors.validation.field.value",
-      "detail": "<information about invalid field>",
-      "source": "<information about the location of the invalid field>"
+      "detail": "Invalid field 'z'",
+      "source": "object.x.z"
     }
   ]
 }

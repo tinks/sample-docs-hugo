@@ -19,7 +19,41 @@ post:
   responses:
     200:
       description: Created
+      content:
+        application/json:
+          schema: { $ref: schemas/client_token.yaml }
     400:
-      description: Bad Request (mandatory fields missing or invalid value)
+      description: Bad Request
+      content: 
+        application/json:
+          schema: { $ref: ../../errors/schemas/errors.yaml }
+          examples:
+            Invalid field type: { $ref: ../../errors/examples/validation.field.type.yaml }
+            Invalid field: { $ref: ../../errors/examples/validation.field.value.yaml }
+    401:
+      description: Unauthorized
+      content: 
+        application/json:
+          schema: { $ref: ../../errors/schemas/errors.yaml }
+    403:
+      description: Forbidden
+      content: 
+        application/json:
+          schema: { $ref: ../../errors/schemas/errors.yaml }
     409:
-      description: Conflict (user_id already exists)
+      description: Conflict
+      content: 
+        application/json:
+          schema: { $ref: ../../errors/schemas/errors.yaml }
+          examples:
+            User ID already exists: 
+              value: {
+              "errors": [
+                {
+                  "id": "21fc115e-08c8-45af-8f0b-271f7d6fe254",
+                  "title": "User ID already exists",
+                  "code": "errors.conflict.id",
+                  "detail": "The provided user ID is already in use."
+                }
+              ]
+            }

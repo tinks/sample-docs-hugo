@@ -36,23 +36,28 @@ put:
     200:
       description: Success
     400:
-      description: Bad Request (invalid value)
+      description: Bad Request
+      content: 
+        application/json:
+          schema: { $ref: ../../errors/schemas/errors.yaml }
+          examples:
+            Invalid field type: { $ref: ../../errors/examples/validation.field.type.yaml }
+            Invalid field: { $ref: ../../errors/examples/validation.field.value.yaml }
     401:
       description: Unauthorized
+      content: 
+        application/json:
+          schema: { $ref: ../../errors/schemas/errors.yaml }
     403:
       description: Forbidden
       content: 
-        application/json: 
-          examples: 
-            permissionDenied: 
-              value: {
-                "error": {
-                  "title": "Permission denied",
-                  "status": "403"
-                }
-              }
+        application/json:
+          schema: { $ref: ../../errors/schemas/errors.yaml }
     404:
-      description: Does Not Exist
+      description: Not Found
+      content: 
+        application/json:
+          schema: { $ref: ../../errors/schemas/errors.yaml }
 delete:
   tags: 
     -  Client account
@@ -71,22 +76,19 @@ delete:
               description: The reason for deleting the client
   responses:
     204:
-      description: Success
-    400:
-      description: Validation failure (corrupted token)
+      description: No response
+    401:
+      description: Unauthorized
+      content: 
+        application/json:
+          schema: { $ref: ../../errors/schemas/errors.yaml }
     403:
       description: Forbidden
       content: 
-        application/json: 
-          examples: 
-            permissionDenied: 
-              value: {
-                "error": {
-                  "title": "Permission denied",
-                  "status": "403"
-                }
-              }
+        application/json:
+          schema: { $ref: ../../errors/schemas/errors.yaml }
     404:
-      description: User not found
-    500:
-      description: Internal server error
+      description: Not Found
+      content: 
+        application/json:
+          schema: { $ref: ../../errors/schemas/errors.yaml }

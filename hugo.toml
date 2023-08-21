@@ -2,12 +2,17 @@ baseURL = "/"
 title = "Sample documentation"
 relativeURLs = true
 
-# Highlighting config
-pygmentsCodeFences = true
-pygmentsUseClasses = false
-# Use the new Chroma Go highlighter in Hugo.
-pygmentsUseClassic = false
-pygmentsStyle = "tango"
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      typographer = false
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+      # See a complete list of available styles at https://xyproto.github.io/splash/docs/all.html
+      style = "catppuccin-frappe"
+      # Uncomment if you want your chosen highlight style used for code blocks without a specified language
+      guessSyntax = false
 
 [params]
   copyright = "tinks"
@@ -15,6 +20,7 @@ pygmentsStyle = "tango"
   # Enable local search
   offlineSearch = true
   algolia_docsearch = false
+  prism_syntax_highlighting = false
 
 [params.ui]
   sidebar_menu_compact = true
