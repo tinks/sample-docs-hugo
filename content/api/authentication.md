@@ -45,4 +45,4 @@ For more information on JWT and decoding the token, refer to [jwt.io](https://jw
 
 Try out fetching an API token for your staging environment.
 
-{{< rapi-doc src="../api/v1/auth/openapi.yaml" no-auth="true" >}}
+{{< rapi-doc src="api/v1/auth/openapi.yaml" no-auth="true" >}}

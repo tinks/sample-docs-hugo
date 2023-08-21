@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "/sample-docs/"
 title = "Sample documentation"
 relativeURLs = true
 

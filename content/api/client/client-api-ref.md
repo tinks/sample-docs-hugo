@@ -9,4 +9,4 @@ weight: 50
 
 Try out the client account API on your staging environment.
 
-{{< rapi-doc src="../api/v1/client/openapi.yaml" >}}
+{{< rapi-doc src="api/v1/client/openapi.yaml" >}}
