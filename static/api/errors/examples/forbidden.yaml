@@ -1,0 +1,9 @@
+value: {
+    "errors": [
+      {
+        "id": "21fc115e-08c8-45af-8f0b-271f7d6fe254",
+        "title": "You do not have permission to perform this action.",
+        "code": "errors.forbidden"
+      }
+    ]
+  }

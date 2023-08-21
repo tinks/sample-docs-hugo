@@ -1,0 +1,22 @@
+{{ $original := .Get "src" }}
+<rapi-doc id='rapi-doc-el'
+  spec-url = '{{ $original | relURL }}'
+  show-info = 'false'
+  show-header = 'false'
+  render-style = 'view'
+  layout = 'column'
+  schema-description-expanded = 'true'
+  theme = 'light'
+  allow-spec-url-load = 'false'
+  allow-spec-file-load = 'false'
+  allow-spec-file-download = 'true'
+  primary-color = '#313C73'
+  persist-auth = 'true'
+  fetch-credentials = 'omit'
+  allow-try = 'true'
+  default-schema-tab = 'schema'
+  {{ if eq ( .Get "no-auth" ) "true" }}
+  allow-authentication = 'false'
+  {{ end }}
+  >
+</rapi-doc>

@@ -1,0 +1,11 @@
+type: object
+properties:
+  custom_data:
+    type: object
+    description: Extra information about the client account.
+    additionalProperties: 
+      oneOf:
+        - type: string
+        - type: number
+        - type: boolean
+        - type: object

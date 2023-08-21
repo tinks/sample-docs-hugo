@@ -1,0 +1,6 @@
+type: http
+scheme: bearer
+bearerFormat: JWT
+description: |
+  Use the JWT bearer token retrieved from the authentication API in the header for each endpoint, 
+  except in the authentication API

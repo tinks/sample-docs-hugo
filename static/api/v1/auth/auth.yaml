@@ -1,0 +1,66 @@
+post:
+  tags:
+    - Authentication
+  summary: Fetch JWT bearer token
+  description: |
+    Use this endpoint with your service user to retrieve a JWT bearer token.
+  operationId: fetchJWTBearerToken
+  security: []
+  requestBody:
+    description: Login details of the service user
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          required:
+          - username
+          - password
+          properties:
+            username:
+              type: string
+              description: Service user's user name
+            password:
+              type: string
+              description: Service user's password
+  responses:
+    200:
+      description: Success
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              api_token:
+                type: string
+                description: The API token
+    400:
+      description: Bad Request
+      content: 
+        application/json:
+          schema: { $ref: ../../errors/schemas/errors.yaml }
+          examples: 
+            account_error:
+              value: {
+                "errors": [{
+                  "id": "21fc115e-08c8-45af-8f0b-271f7d6fe254",
+                  "title": "Field type is invalid.",
+                  "detail": "Could not validate field 'account' as 'string'",
+                  "code": "errors.validation.field.type",
+                  "status": "400"
+                }]
+              } 
+    401:
+      description: Authentication failed
+      content: 
+        application/json: 
+          schema: { $ref: ../../errors/schemas/errors.yaml }
+          examples: 
+            errors.login.failed: { $ref: ../../errors/examples/login.failed.yaml }
+    403:
+      description: Permission denied
+      content: 
+        application/json: 
+          schema: { $ref: ../../errors/schemas/errors.yaml }
+          examples: 
+            errors.forbidden.wrong.user: { $ref: ../../errors/examples/forbidden.wrong.user.yaml }

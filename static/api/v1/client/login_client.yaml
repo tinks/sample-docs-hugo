@@ -1,0 +1,43 @@
+parameters:
+  - $ref: ../schemas/user_id.yaml
+post:
+  tags: 
+    -  Client account
+  summary: Log in client
+  description: | 
+    Log in the client and use the `client_token` when updating or deleting a client account.
+
+    Logging in a client also fetches their account details.
+  operationId: loginClient
+  requestBody: 
+    content: 
+      application/json: 
+        schema:
+          required:
+            - email
+            - password
+          properties: 
+            email:
+              type: string
+              description: The email associated with the client's account.
+            password:
+              type: string
+              format: password
+              description: The password associated with the client's account. 
+  responses:
+    200:
+      description: Success
+      content:
+        application/json:
+          schema:
+            allOf:
+              - type: object
+                properties:
+                  client_token:
+                    type: string
+                    description: The client token to be used for the client in your web app
+              - $ref: schemas/get_client.yaml
+    401:
+      description: Unauthorized
+    404:
+      description: Does Not Exist

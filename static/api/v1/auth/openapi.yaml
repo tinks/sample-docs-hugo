@@ -1,0 +1,20 @@
+openapi: "3.1.0"
+info:
+    version: 1.0.0 #version of this document
+    title: Authentication API
+    description: |
+      Fetch credentials to use the APIs.
+servers:
+  - url: https://api.staging.{platform_id}.platform.io
+    description: The URL for your staging environment.
+    variables:
+      platform_id:
+        default: 'platform_id'
+        description: |
+          The `platform_id` provided to you during your onboarding, which identifies your deployments.
+tags:
+  - name: Authentication
+    description: Endpoint to fetch the bearer token
+paths:
+  /v1/login/password: { $ref: auth.yaml }
+    

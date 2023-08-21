@@ -1,0 +1,68 @@
+baseURL = "/"
+title = "Sample documentation"
+
+# Highlighting config
+pygmentsCodeFences = true
+pygmentsUseClasses = false
+# Use the new Chroma Go highlighter in Hugo.
+pygmentsUseClassic = false
+pygmentsStyle = "tango"
+
+[params]
+  copyright = "tinks"
+
+  # Enable local search
+  offlineSearch = true
+  algolia_docsearch = false
+
+[params.ui]
+  sidebar_menu_compact = true
+  sidebar_menu_foldable = true
+  navbar_logo = true
+  sidebar_search_disable = true
+
+[params.links]
+  [[params.links.user]]
+    name = "Icons by Font Awesome"
+    url = "https://fontawesome.com/"
+    icon = "fa-solid fa-font-awesome"
+
+[params.mermaid]
+  enable = true
+  theme = 'neutral'
+  themeCSS = 'rect.actor { fill: #097E8C; stroke: #097E8C; } text.actor > tspan { fill: white; stroke: none; } .nodeLabel { font-size: 14px; } .edgeLabel { font-size: 14px; }'
+  fontFamily = 'Courier'
+
+[params.mermaid.sequence]
+  diagramMarginX = 0
+  diagramMarginY = 10
+  actorMargin = 20
+  width = 100
+  height = 30
+  boxMargin = 5
+  boxTextMargin = 5
+  mirrorActors = false
+  useMaxWidth = true
+  actorFontFamily = 'Courier'
+  actorFontSize = '14px'
+  actorFontWeight = 'bold'
+  messageFontFamily = 'Courier'
+  messageFontSize = '14px'
+  noteFontFamily = 'Courier'
+  noteFontSize = '14px'
+
+[module]
+  proxy = "direct"
+  [module.hugoVersion]
+    extended = true
+    max = ""
+    min = "0.107.0"
+  [[module.imports]]
+    path = "github.com/google/docsy"
+  [[module.imports]]
+    path = "github.com/google/docsy/dependencies"
+  [[module.imports]]
+    path = "github.com/rapi-doc/RapiDoc"
+  [[module.imports.mounts]]
+    source = "dist/rapidoc-min.js"
+    target = "static/js/rapidoc-min.js"

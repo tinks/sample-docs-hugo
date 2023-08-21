@@ -1,0 +1,9 @@
+value: {
+  "errors": [
+    {
+      "id": "21fc115e-08c8-45af-8f0b-271f7d6fe254",
+      "title": "<entity> could not be found",
+      "code": "errors.not-found"
+    }
+  ]
+}

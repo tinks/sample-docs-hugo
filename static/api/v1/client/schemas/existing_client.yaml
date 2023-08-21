@@ -1,0 +1,26 @@
+type: object
+properties:
+  phone_number:
+    type:
+    - string
+    - 'null'
+    description: The client's phone number. The format must be E.164, for example, +27761234567.
+  email:
+    type: string
+    description: The client's email address.
+  name:
+    type: object
+    description: The client's names.
+    properties:
+      first_name:
+        type:
+        - string
+        description: The client's first name.
+      last_name:
+        type:
+        - string
+        description: The client's last name.
+  password:
+    type: string
+    format: password
+    description: The client's chosen password for their account
