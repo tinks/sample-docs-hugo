@@ -51,14 +51,14 @@ post:
                 }]
               } 
     401:
-      description: Authentication failed
+      description: Unauthorized
       content: 
         application/json: 
           schema: { $ref: ../../errors/schemas/errors.yaml }
           examples: 
             errors.login.failed: { $ref: ../../errors/examples/login.failed.yaml }
     403:
-      description: Permission denied
+      description: Forbidden
       content: 
         application/json: 
           schema: { $ref: ../../errors/schemas/errors.yaml }

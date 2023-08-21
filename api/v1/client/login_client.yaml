@@ -31,13 +31,20 @@ post:
         application/json:
           schema:
             allOf:
-              - type: object
-                properties:
-                  client_token:
-                    type: string
-                    description: The client token to be used for the client in your web app
+              - $ref: schemas/client_token.yaml
               - $ref: schemas/get_client.yaml
     401:
       description: Unauthorized
+      content: 
+        application/json:
+          schema: { $ref: ../../errors/schemas/errors.yaml }
+    403:
+      description: Forbidden
+      content: 
+        application/json:
+          schema: { $ref: ../../errors/schemas/errors.yaml }
     404:
-      description: Does Not Exist
+      description: Not Found
+      content: 
+        application/json:
+          schema: { $ref: ../../errors/schemas/errors.yaml }

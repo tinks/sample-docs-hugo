@@ -1,4 +1,51 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sample documentation – Client account API</title><link>/api/client/</link><description>Recent content in Client account API on Sample documentation</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 19 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="/api/client/index.xml" rel="self" type="application/rss+xml"/><item><title>Api: Getting started</title><link>/api/client/client-get-started/</link><pubDate>Sat, 19 Aug 2023 00:00:00 +0000</pubDate><guid>/api/client/client-get-started/</guid><description/></item><item><title>Api: API reference</title><link>/api/client/client-api-ref/</link><pubDate>Sat, 19 Aug 2023 00:00:00 +0000</pubDate><guid>/api/client/client-api-ref/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sample documentation – Client account API</title><link>/api/client/</link><description>Recent content in Client account API on Sample documentation</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 19 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="/api/client/index.xml" rel="self" type="application/rss+xml"/><item><title>Api: Getting started</title><link>/api/client/client-get-started/</link><pubDate>Sat, 19 Aug 2023 00:00:00 +0000</pubDate><guid>/api/client/client-get-started/</guid><description>
+&lt;div class="alert alert-primary" role="alert">
+&lt;h4 class="alert-heading">Prerequisites&lt;/h4>
+&lt;p>Before you get started with the client account API, you must have the following information ready:&lt;/p>
+&lt;ul>
+&lt;li>your &lt;code>platform_id&lt;/code> to build the base URL&lt;/li>
+&lt;li>the login details for your service user&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;h2 id="build-the-base-url">Build the base URL&lt;/h2>
+&lt;p>Use your &lt;code>platform_id&lt;/code> to build up the base URL for all available REST API endpoints. See &lt;a href="../../api/base-url-service-user/#base-url">Base URL&lt;/a> for more information.&lt;/p>
+&lt;p>For example, if your &lt;code>platform_id&lt;/code> is &lt;code>my_company_platform_id&lt;/code>, then the base URL for the REST API endpoints in your staging environment is &lt;code>https://api.staging.my_company_platform_id.platform.io&lt;/code>.&lt;/p>
+&lt;h2 id="fetch-api-token">Fetch API token&lt;/h2>
+&lt;p>Before calling the client account API endpoints, fetch an API token with your service user using the &lt;a href="../../api/authentication/#post-/v1/login/password">Authentication API&lt;/a> endpoint.&lt;/p>
+&lt;p>For example, if your service user for your staging environment has the following login details:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>username&lt;/code>: service_user&lt;/li>
+&lt;li>&lt;code>password&lt;/code>: xxxyyy&lt;/li>
+&lt;/ul>
+&lt;p>, then the call looks as follows:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#ef9f76;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>curl POST https://api.staging.my_company_platform_id.platform.io/v1/login/password &lt;span style="color:#8caaee">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8caaee">&lt;/span>--data &lt;span style="color:#a6d189">&amp;#39;{
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6d189"> &amp;#34;username&amp;#34;: &amp;#34;service_user&amp;#34;,
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6d189"> &amp;#34;password&amp;#34;: &amp;#34;xxxyyy&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6d189">}&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>, with a success response as follows:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#ef9f76;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#c6d0f5">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ca9ee6">&amp;#34;api_token&amp;#34;&lt;/span>&lt;span style="color:#c6d0f5">:&lt;/span> &lt;span style="color:#a6d189">&amp;#34;your_api_token&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#c6d0f5">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="create-a-client-account">Create a client account&lt;/h2>
+&lt;p>Use the newly created API token as a bearer token in the header for each call to the client account API endpoints. For example, when you create a new client account. See &lt;a href="../../api/client/client-api-ref/#post-/v1/client/signup">Create client account&lt;/a> for more information.&lt;/p>
+&lt;p>Example call:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#ef9f76;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>curl POST https://api.staging.my_company_platform_id.platform.io/v1/client/signup &lt;span style="color:#8caaee">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8caaee">&lt;/span>--header &lt;span style="color:#a6d189">&amp;#39;Authorization: Bearer your_api_token&amp;#39;&lt;/span> &lt;span style="color:#8caaee">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8caaee">&lt;/span>--data &lt;span style="color:#a6d189">&amp;#39;{
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6d189"> &amp;#34;user_id&amp;#34;: &amp;#34;80491f93-1eb1-42c2-b5e1-d2e94dac5ab9&amp;#34;,
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6d189"> &amp;#34;email&amp;#34;: &amp;#34;new_client@client.com&amp;#34;,
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6d189"> &amp;#34;name&amp;#34;: {
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6d189"> &amp;#34;first_name&amp;#34;: &amp;#34;new&amp;#34;,
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6d189"> &amp;#34;last_name&amp;#34;: &amp;#34;client&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6d189"> },
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6d189"> &amp;#34;password&amp;#34;: &amp;#34;new_client&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6d189">}&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Response:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#ef9f76;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#c6d0f5">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ca9ee6">&amp;#34;client_token&amp;#34;&lt;/span>&lt;span style="color:#c6d0f5">:&lt;/span> &lt;span style="color:#a6d189">&amp;#34;client_token&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#c6d0f5">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Api: API reference</title><link>/api/client/client-api-ref/</link><pubDate>Sat, 19 Aug 2023 00:00:00 +0000</pubDate><guid>/api/client/client-api-ref/</guid><description>
 &lt;p>Try out the client account API on your staging environment.&lt;/p>
 &lt;rapi-doc id='rapi-doc-el'
 spec-url = '/api/v1/client/openapi.yaml'
