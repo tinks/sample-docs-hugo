@@ -1,5 +1,6 @@
 baseURL = "/"
 title = "Sample documentation"
+relativeURLs = true
 
 # Highlighting config
 pygmentsCodeFences = true
