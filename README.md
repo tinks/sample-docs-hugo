@@ -44,20 +44,20 @@ hugo mod get -u
    `hugo mod get`
 1. Start a Hugo server</br>
    `hugo server -D`
-1. Browse to `localhost:1313` to see the output
+1. Browse to `localhost:1313/sample-docs` to see the output
 
 ## Build
 
 ### Locally
 
 1. Install the necessary packages: `npm install`.
-1. To build locally: `hugo`
+1. To build locally: `hugo -d public/sample-docs`
 
-To also build pages still in draft, add `-D` to the command: `hugo -D`.
+To also build pages still in draft, add `-D` to the command: `hugo -D -d public-sample-docs`.
 
 The output is stored in the `public` folder. To view the built documentation, start a server in this folder. For example, you can do this with the following command (available in Python 3):
 
-`python -m http.server 8000` --> server available at localhost:8000
+`python -m http.server 8000` --> server available at `localhost:8000/sample-docs`
 
 ### Publish
 
