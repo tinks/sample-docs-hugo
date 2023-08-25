@@ -1,4 +1,4 @@
-module tink-assignment
+module sample-docs-hugo
 
 go 1.21
 

@@ -1,4 +1,4 @@
-baseURL = "https://tinks.github.io/sample-docs/"
+baseURL = "https://tinks.github.io/sample-docs-hugo/"
 title = "Sample documentation"
 # relativeURLs = true
 
