@@ -19,7 +19,6 @@ title = "Sample documentation"
 
   # Enable local search
   offlineSearch = true
-  algolia_docsearch = false
   prism_syntax_highlighting = false
 
 [params.ui]
