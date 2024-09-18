@@ -39,23 +39,23 @@ If you cannot provide access to the virtual machine to the company, then you mus
 
    ```
    [gwinstall]
-   aws_access_key_id = <aws_access_key_id provided by INVIDI>
-   aws_secret_access_key = <aws_secret_access_key provided by INVIDI>
+   aws_access_key_id = <aws_access_key_id provided by the company>
+   aws_secret_access_key = <aws_secret_access_key provided by the company>
    ```
 1. Set up the AWS CLI configuration file with the following information:
 
    ``` {#codeblock_rhl_hmk_n1c}
    [profile gwinstall]
-   region = <region provided by INVIDI>
+   region = <region provided by the company>
    ```
 1. Run the following AWS CLI command to activate the gateway:
 
    ```
    aws activate-gateway \
-   --activation-key <activation-key provided by INVIDI>\
-   --gateway-name <gateway-name provided by INVIDI>\
+   --activation-key <activation-key provided by the company>\
+   --gateway-name <gateway-name provided by the company>\
    --gateway-timezone <timezone of the File Gateway VM>\
-   --gateway-region <region provided by INVIDI>\
+   --gateway-region <region provided by the company>\
    --profile gwinstall
    ```
 

@@ -14,7 +14,7 @@ In this stage, you must test the network connection to your S3 File Gateway.
    ![](../../../../images/fdps_installation_login_vm.png)
 1. Enter the command to “Test Network Connectivity” and press Enter.
 1. Select the “Public” endpoint type and press Enter.
-1. Enter the AWS region, which you have received from your designated INVIDI representative, and press Enter.
+1. Enter the AWS region, which you have received from your designated company representative, and press Enter.
    1. If the test is successful, continue with the procedure.
       ![](../../../../images/fdps_installation_test_network.png)
 

@@ -148,7 +148,7 @@ The Live TV app requires a configuration file to be present on the Android TV bo
    account=in-rel-demo
    logo_position=bottom-left
    ```
-1. Save the file with the name `invidi.properties`.
+1. Save the file with the name `company.properties`.
 1. Enter the following command from the terminal to connect to the Android TV box:
 
    ```
@@ -164,14 +164,14 @@ The Live TV app requires a configuration file to be present on the Android TV bo
 1. Enter the following command to push the configuration file to the Android TV box in the `/sdcard/Download/` location:
 
    ```
-   adb push <local path to invidi.properties file> /sdcard/Download/
+   adb push <local path to company.properties file> /sdcard/Download/
    ```
 
    For example:
 
    ```
-   > adb push /Users/XXX/Desktop/box2/invidi.properties /sdcard/Download/
-   /Users/XXX/Desktop/box2/invidi.properties: 1 file pushed, 0 skipped. 0.0 MB/s (65 bytes in 1.127s)
+   > adb push /Users/XXX/Desktop/box2/company.properties /sdcard/Download/
+   /Users/XXX/Desktop/box2/company.properties: 1 file pushed, 0 skipped. 0.0 MB/s (65 bytes in 1.127s)
    ```
 1. Enter the following command to disconnect from the Android TV box:
 
@@ -189,7 +189,7 @@ The Live TV app requires a configuration file to be present on the Android TV bo
 ## Install app
 
 {{% alert %}}
-Make sure you have the latest version of the Live TV app on your computer. If not, contact your designated INVIDI representative and request the latest version.
+Make sure you have the latest version of the Live TV app on your computer. If not, contact your designated company representative and request the latest version.
 {{% /alert %}}
 
 In this stage, you install the Live TV app. Follow these instructions:
