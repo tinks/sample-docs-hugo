@@ -4,7 +4,7 @@ linkTitle: "File Gateway"
 description: ""
 date: 2024-08-19
 draft: false
-weight: 50
+weight: 10
 ---
 
 An Amazon S3 File Gateway enables you to share files between your on-premises components and the company's components within your solution deployed in AWS. For example, asset metadata is collected and managed in your on-premises data management system. The asset metadata must be sent to the company's asset processing component for further processing and use by other company components. In this example, the S3 File Gateway provides you with a local network drive location to drop the asset metadata and eliminates a complex integration between your on-premises components and the cloud components in your solution.
