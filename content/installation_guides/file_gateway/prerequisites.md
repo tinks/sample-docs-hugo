@@ -15,7 +15,7 @@ Before you install the S3 File Gateway, make sure that the following prerequisit
   * Microsoft Hyper-V Hypervisor
   * Linux Kernel-based Virtual Machine
 
-    For supported versions, see [Supported hypervisors and host requirements](https://docs.aws.amazon.com/filegateway/latest/files3/Requirements.html#requirements-host)\)
+    For supported versions, see [Supported hypervisors and host requirements](https://docs.aws.amazon.com/filegateway/latest/files3/Requirements.html#requirements-host)
 * Sufficient bandwidth between your network and AWS \(at least 100 Mbps\)
 * Hardware:
   * Four virtual processors assigned to the VM
@@ -23,7 +23,7 @@ Before you install the S3 File Gateway, make sure that the following prerequisit
   * 80 GB of disk space for installation of VM image and system data
   * 150 GB for an additional cache disk for your VM
   
-    For more information, see [Hardware and storage requirements](https://docs.aws.amazon.com/filegateway/latest/files3/Requirements.html#requirements-hardware-storage)\)
+    For more information, see [Hardware and storage requirements](https://docs.aws.amazon.com/filegateway/latest/files3/Requirements.html#requirements-hardware-storage)
 
 
 For more information on prerequisites, see [File Gateway setup requirements - AWS Storage Gateway](https://docs.aws.amazon.com/filegateway/latest/files3/Requirements.html).
