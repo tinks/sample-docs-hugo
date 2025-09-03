@@ -1,24 +1,161 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sample documentation</title><link>https://tinks.github.io/sample-docs-hugo/</link><description>Recent content on Sample documentation</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 19 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://tinks.github.io/sample-docs-hugo/index.xml" rel="self" type="application/rss+xml"/><item><title>Prerequisites</title><link>https://tinks.github.io/sample-docs-hugo/installation_guides/file_gateway/prerequisites/</link><pubDate>Wed, 18 Sep 2024 00:00:00 +0000</pubDate><guid>https://tinks.github.io/sample-docs-hugo/installation_guides/file_gateway/prerequisites/</guid><description>Before you install the S3 File Gateway, make sure that the following prerequisites are met:
-Microsoft Active Directory service account with the correct permissions. For more information, see Active Directory service account permission requirements - AWS Storage Gateway One of the following hypervisors to deploy the virtual machine appliance: VMware ESXi Hypervisor
-Microsoft Hyper-V Hypervisor
-Linux Kernel-based Virtual Machine
-For supported versions, see Supported hypervisors and host requirements
-Sufficient bandwidth between your network and AWS (at least 100 Mbps) Hardware: Four virtual processors assigned to the VM</description></item><item><title>Prerequisites</title><link>https://tinks.github.io/sample-docs-hugo/installation_guides/live_tv_app/prerequisites/</link><pubDate>Mon, 19 Aug 2024 00:00:00 +0000</pubDate><guid>https://tinks.github.io/sample-docs-hugo/installation_guides/live_tv_app/prerequisites/</guid><description>Before you install the Live TV app, make sure that the following prerequisites are met:
-You have the latest version of the Live TV app on your computer. If not, contact your designated company representative and request the latest version. You have the Android Debug Bridge (adb) command-line tool installed on your computer. For more information on how to install the adb command-line tool, see https://developer.android.com/tools/releases/platform-tools. Your computer and the Android TV box are located on the same network.</description></item><item><title>Base URL &amp; service user</title><link>https://tinks.github.io/sample-docs-hugo/api/base-url-service-user/</link><pubDate>Sat, 19 Aug 2023 00:00:00 +0000</pubDate><guid>https://tinks.github.io/sample-docs-hugo/api/base-url-service-user/</guid><description>To get started with the integration, you need the following information:
-Base URL: the URL where all API endpoints are located for your platform instance Service user: the account set up for your platform instance to fetch the authentication token for the API endpoints Base URL As a customer, you have a staging and production environment:
-Staging base URL: https://api.staging.&amp;lt;platform_id&amp;gt;.platform.io Production base URL: https://api.&amp;lt;platform_id&amp;gt;.platform.io Your platform_id is provided to you during your onboarding.</description></item><item><title>Getting started</title><link>https://tinks.github.io/sample-docs-hugo/api/client/client-get-started/</link><pubDate>Sat, 19 Aug 2023 00:00:00 +0000</pubDate><guid>https://tinks.github.io/sample-docs-hugo/api/client/client-get-started/</guid><description>Prerequisites Before you get started with the client account API, you must have the following information ready:
-your platform_id to build the base URL the login details for your service user Build the base URL Use your platform_id to build up the base URL for all available REST API endpoints. See Base URL for more information.
-For example, if your platform_id is my_company_platform_id, then the base URL for the REST API endpoints in your staging environment is https://api.</description></item><item><title>Install S3 File Gateway virtual machine</title><link>https://tinks.github.io/sample-docs-hugo/installation_guides/file_gateway/installation_process/file_gateway_vm/</link><pubDate>Wed, 18 Sep 2024 00:00:00 +0000</pubDate><guid>https://tinks.github.io/sample-docs-hugo/installation_guides/file_gateway/installation_process/file_gateway_vm/</guid><description>In this stage, you request where to download the S3 File Gateway and install in your hypervisor.
-Contact your designated company representative, and request the URL to the file gateway and the AWS region. Provide the hypervisor you have with your request to receive the correct URL. Only the following hypervisors are supported: VMware ESXi Hypervisor Microsoft Hyper-V Hypervisor Linux Kernel-based Virtual Machine Download the S3 File Gateway virtual machine (VM) image and install it in your hypervisor.</description></item><item><title>Security recommendations</title><link>https://tinks.github.io/sample-docs-hugo/installation_guides/live_tv_app/security_recommendations/</link><pubDate>Mon, 19 Aug 2024 00:00:00 +0000</pubDate><guid>https://tinks.github.io/sample-docs-hugo/installation_guides/live_tv_app/security_recommendations/</guid><description>The company recommends the following security measures for the Android TV boxes installed in your environment:
-Updates to the operating system should be installed on the Android TV boxes when they become available from the manufacturer. Updates to the Live TV app should be installed on the Android TV boxes when they become available from the company. The Android TV boxes should be installed in an isolated network, because the devices themselves do not support authentication, and do not have a firewall embedded.</description></item><item><title>Rate limiting</title><link>https://tinks.github.io/sample-docs-hugo/api/rate-limiting/</link><pubDate>Mon, 21 Aug 2023 00:00:00 +0000</pubDate><guid>https://tinks.github.io/sample-docs-hugo/api/rate-limiting/</guid><description>Each endpoint in the platform's REST API can be called up to 300 times per minute. Deviations to this rate limit are indicated on the affected endpoints.</description></item><item><title>Next steps</title><link>https://tinks.github.io/sample-docs-hugo/installation_guides/file_gateway/next_steps/</link><pubDate>Wed, 18 Sep 2024 00:00:00 +0000</pubDate><guid>https://tinks.github.io/sample-docs-hugo/installation_guides/file_gateway/next_steps/</guid><description>In the next steps, the company sets up one or more AWS File shares as needed for your solution and according to your network file sharing protocol:
-SMB, which is standard for Microsoft Windows environments NFS, which is standard for Linux environments When the AWS File shares are available, the company provides you with the necessary commands to map the AWS File share to your local network folder and asks you to send a test file to test the setup.</description></item><item><title>Test network connection</title><link>https://tinks.github.io/sample-docs-hugo/installation_guides/file_gateway/installation_process/test_network_connection/</link><pubDate>Wed, 18 Sep 2024 00:00:00 +0000</pubDate><guid>https://tinks.github.io/sample-docs-hugo/installation_guides/file_gateway/installation_process/test_network_connection/</guid><description>In this stage, you must test the network connection to your S3 File Gateway.
-Log into your virtual machine. A screen similar to the following is displayed:
-Enter the command to “Test Network Connectivity” and press Enter.
-Select the “Public” endpoint type and press Enter.
-Enter the AWS region, which you have received from your designated company representative, and press Enter.
-If the test is successful, continue with the procedure. If the test is unsuccessful, then configure your firewall and router to allow traffic from the AWS service endpoints described here: Allowing AWS Storage Gateway access through firewalls and routers.</description></item><item><title>Installation process</title><link>https://tinks.github.io/sample-docs-hugo/installation_guides/live_tv_app/installation_process/</link><pubDate>Mon, 19 Aug 2024 00:00:00 +0000</pubDate><guid>https://tinks.github.io/sample-docs-hugo/installation_guides/live_tv_app/installation_process/</guid><description>Before you start, make sure the Android TV box is
-connected to a screen, connected to your network, and connected to the network stream through its input port. Enable USB debugging and fetch IP address Although you connect to the Android TV box over your network, you must enable USB debugging on the Android TV box before you can install the Live TV app through the Android Debug Bridge (adb).</description></item><item><title>Authentication API</title><link>https://tinks.github.io/sample-docs-hugo/api/authentication/</link><pubDate>Sat, 19 Aug 2023 00:00:00 +0000</pubDate><guid>https://tinks.github.io/sample-docs-hugo/api/authentication/</guid><description>Bearer token An API token is used to authenticate with all endpoints, except the Authentication API, where the API token is fetched from. Use your service account details to fetch the API token.
-This API token is used as a Bearer token in the header of each API call.
-Headers: Authorization: Bearer &amp;lt;api-token&amp;gt; API token payload and expiry Cache the API token and only request a new one when the old one has either expired or is near expiry.</description></item><item><title>Configure and activate gateway</title><link>https://tinks.github.io/sample-docs-hugo/installation_guides/file_gateway/installation_process/activate_gateway/</link><pubDate>Wed, 18 Sep 2024 00:00:00 +0000</pubDate><guid>https://tinks.github.io/sample-docs-hugo/installation_guides/file_gateway/installation_process/activate_gateway/</guid><description>In this stage, the S3 File Gateway is configured and activated. How this happens depends on whether or not the company is granted access to the virtual machine where you installed the S3 File Gateway.
-The company can have access to VM If you allow the company, even temporary, access to the virtual machine where you installed the S3 File Gateway, then the company can configure and activate the S3 File Gateway.</description></item><item><title>Troubleshooting</title><link>https://tinks.github.io/sample-docs-hugo/installation_guides/live_tv_app/troubleshooting/</link><pubDate>Mon, 19 Aug 2024 00:00:00 +0000</pubDate><guid>https://tinks.github.io/sample-docs-hugo/installation_guides/live_tv_app/troubleshooting/</guid><description>Before you start troubleshooting the Android TV box and the app, the Android TV box must be connected to a screen. When something happens to one of your Android TV boxes, it may be necessary to troubleshoot the device. This topic helps you troubleshoot the most common issues.
-Disconnected cables USB to RF/DVB-C cable disconnected When the USB to RF/DVB-C cable is disconnected from the Android TV box (see connection 1 in the image), then the app loses the tuned channel, and an operator must re-tune the app to the correct channel.</description></item><item><title>API reference</title><link>https://tinks.github.io/sample-docs-hugo/api/client/client-api-ref/</link><pubDate>Sat, 19 Aug 2023 00:00:00 +0000</pubDate><guid>https://tinks.github.io/sample-docs-hugo/api/client/client-api-ref/</guid><description>Try out the client account API on your staging environment.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sample documentation</title><link>https://tinks.github.io/sample-docs-hugo/</link><description>Recent content on Sample documentation</description><generator>Hugo</generator><language>en</language><lastBuildDate>Wed, 18 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://tinks.github.io/sample-docs-hugo/index.xml" rel="self" type="application/rss+xml"/><item><title>Prerequisites</title><link>https://tinks.github.io/sample-docs-hugo/installation_guides/file_gateway/prerequisites/</link><pubDate>Wed, 18 Sep 2024 00:00:00 +0000</pubDate><guid>https://tinks.github.io/sample-docs-hugo/installation_guides/file_gateway/prerequisites/</guid><description>&lt;p&gt;Before you install the S3 File Gateway, make sure that the following prerequisites are met:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Microsoft Active Directory service account with the correct permissions. For more information, see &lt;a href="https://docs.aws.amazon.com/filegateway/latest/files3/ad-serviceaccount-permissions.html"&gt;Active Directory service account permission requirements - AWS Storage Gateway&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;One of the following hypervisors to deploy the virtual machine appliance:
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;VMware ESXi Hypervisor&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Microsoft Hyper-V Hypervisor&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Linux Kernel-based Virtual Machine&lt;/p&gt;
+&lt;p&gt;For supported versions, see &lt;a href="https://docs.aws.amazon.com/filegateway/latest/files3/Requirements.html#requirements-host"&gt;Supported hypervisors and host requirements&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Sufficient bandwidth between your network and AWS (at least 100 Mbps)&lt;/li&gt;
+&lt;li&gt;Hardware:
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Four virtual processors assigned to the VM&lt;/p&gt;</description></item><item><title>Prerequisites</title><link>https://tinks.github.io/sample-docs-hugo/installation_guides/live_tv_app/prerequisites/</link><pubDate>Mon, 19 Aug 2024 00:00:00 +0000</pubDate><guid>https://tinks.github.io/sample-docs-hugo/installation_guides/live_tv_app/prerequisites/</guid><description>&lt;p&gt;Before you install the Live TV app, make sure that the following prerequisites are met:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You have the latest version of the Live TV app on your computer. If not, contact your designated company representative and request the latest version.&lt;/li&gt;
+&lt;li&gt;You have the Android Debug Bridge (adb) command-line tool installed on your computer. For more information on how to install the adb command-line tool, see &lt;a href="https://developer.android.com/tools/releases/platform-tools"&gt;https://developer.android.com/tools/releases/platform-tools&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Your computer and the Android TV box are located on the same network.&lt;/li&gt;
+&lt;li&gt;The network stream is connected to the input port of the Android TV box.&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Base URL &amp; service user</title><link>https://tinks.github.io/sample-docs-hugo/api/base-url-service-user/</link><pubDate>Sat, 19 Aug 2023 00:00:00 +0000</pubDate><guid>https://tinks.github.io/sample-docs-hugo/api/base-url-service-user/</guid><description>&lt;p&gt;To get started with the integration, you need the following information:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Base URL&lt;/strong&gt;: the URL where all API endpoints are located for your platform instance&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Service user&lt;/strong&gt;: the account set up for your platform instance to fetch the authentication token for the API endpoints&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="base-url"&gt;Base URL&lt;/h2&gt;
+&lt;p&gt;As a customer, you have a staging and production environment:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Staging base URL&lt;/strong&gt;: &lt;code&gt;https://api.staging.&amp;lt;platform_id&amp;gt;.platform.io&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Production base URL&lt;/strong&gt;: &lt;code&gt;https://api.&amp;lt;platform_id&amp;gt;.platform.io&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Your &lt;code&gt;platform_id&lt;/code&gt; is provided to you during your onboarding.&lt;/p&gt;</description></item><item><title>Getting started</title><link>https://tinks.github.io/sample-docs-hugo/api/client/client-get-started/</link><pubDate>Sat, 19 Aug 2023 00:00:00 +0000</pubDate><guid>https://tinks.github.io/sample-docs-hugo/api/client/client-get-started/</guid><description>&lt;div class="alert alert-primary" role="alert"&gt;
+&lt;h4 class="alert-heading"&gt;Prerequisites&lt;/h4&gt;
+
+ &lt;p&gt;Before you get started with the client account API, you must have the following information ready:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;your &lt;code&gt;platform_id&lt;/code&gt; to build the base URL&lt;/li&gt;
+&lt;li&gt;the login details for your service user&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id="build-the-base-url"&gt;Build the base URL&lt;/h2&gt;
+&lt;p&gt;Use your &lt;code&gt;platform_id&lt;/code&gt; to build up the base URL for all available REST API endpoints. See &lt;a href="https://tinks.github.io/sample-docs-hugo/api/base-url-service-user/#base-url"&gt;Base URL&lt;/a&gt; for more information.&lt;/p&gt;
+&lt;p&gt;For example, if your &lt;code&gt;platform_id&lt;/code&gt; is &lt;code&gt;my_company_platform_id&lt;/code&gt;, then the base URL for the REST API endpoints in your staging environment is &lt;code&gt;https://api.staging.my_company_platform_id.platform.io&lt;/code&gt;.&lt;/p&gt;</description></item><item><title>Install S3 File Gateway virtual machine</title><link>https://tinks.github.io/sample-docs-hugo/installation_guides/file_gateway/installation_process/file_gateway_vm/</link><pubDate>Wed, 18 Sep 2024 00:00:00 +0000</pubDate><guid>https://tinks.github.io/sample-docs-hugo/installation_guides/file_gateway/installation_process/file_gateway_vm/</guid><description>&lt;p&gt;In this stage, you request where to download the S3 File Gateway and install in your hypervisor.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Contact your designated company representative, and request the &lt;strong&gt;URL to the file gateway&lt;/strong&gt; and the &lt;strong&gt;AWS region&lt;/strong&gt;. Provide the hypervisor you have with your request to receive the correct URL. Only the following hypervisors are supported:
+&lt;ul&gt;
+&lt;li&gt;VMware ESXi Hypervisor&lt;/li&gt;
+&lt;li&gt;Microsoft Hyper-V Hypervisor&lt;/li&gt;
+&lt;li&gt;Linux Kernel-based Virtual Machine&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Download the S3 File Gateway virtual machine (VM) image and install it in your hypervisor. Ensure the following minimum setup:
+&lt;ul&gt;
+&lt;li&gt;Processors: 4&lt;/li&gt;
+&lt;li&gt;RAM: 16 GB&lt;/li&gt;
+&lt;li&gt;Disk for VM image and system data: 80 GB&lt;/li&gt;
+&lt;li&gt;Additional cache disk: 150 GB&lt;/li&gt;
+&lt;li&gt;Network adapter: NAT&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</description></item><item><title>Security recommendations</title><link>https://tinks.github.io/sample-docs-hugo/installation_guides/live_tv_app/security_recommendations/</link><pubDate>Mon, 19 Aug 2024 00:00:00 +0000</pubDate><guid>https://tinks.github.io/sample-docs-hugo/installation_guides/live_tv_app/security_recommendations/</guid><description>&lt;p&gt;The company recommends the following security measures for the Android TV boxes installed in your environment:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Updates to the operating system should be installed on the Android TV boxes when they become available from the manufacturer.&lt;/li&gt;
+&lt;li&gt;Updates to the Live TV app should be installed on the Android TV boxes when they become available from the company.&lt;/li&gt;
+&lt;li&gt;The Android TV boxes should be installed in an isolated network, because the devices themselves do not support authentication, and do not have a firewall embedded.&lt;/li&gt;
+&lt;li&gt;The Android TV boxes should only connect to the isolated network through an Ethernet cable and the wireless connection capabilities should be disabled.&lt;/li&gt;
+&lt;li&gt;Incoming access to the Android TV boxes should be provided through a jump host, a gateway, or similar technologies.&lt;/li&gt;
+&lt;li&gt;Outgoing access from the Android TV boxes to the company's cloud services must be allowed.&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Rate limiting</title><link>https://tinks.github.io/sample-docs-hugo/api/rate-limiting/</link><pubDate>Mon, 21 Aug 2023 00:00:00 +0000</pubDate><guid>https://tinks.github.io/sample-docs-hugo/api/rate-limiting/</guid><description>&lt;p&gt;Each endpoint in the platform's REST API can be called up to 300 times per minute. Deviations to this rate limit are indicated on the affected endpoints.&lt;/p&gt;</description></item><item><title>Next steps</title><link>https://tinks.github.io/sample-docs-hugo/installation_guides/file_gateway/next_steps/</link><pubDate>Wed, 18 Sep 2024 00:00:00 +0000</pubDate><guid>https://tinks.github.io/sample-docs-hugo/installation_guides/file_gateway/next_steps/</guid><description>&lt;p&gt;In the next steps, the company sets up one or more AWS File shares as needed for your solution and according to your network file sharing protocol:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SMB, which is standard for Microsoft Windows environments&lt;/li&gt;
+&lt;li&gt;NFS, which is standard for Linux environments&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;When the AWS File shares are available, the company provides you with the necessary commands to map the AWS File share to your local network folder and asks you to send a test file to test the setup.&lt;/p&gt;</description></item><item><title>Test network connection</title><link>https://tinks.github.io/sample-docs-hugo/installation_guides/file_gateway/installation_process/test_network_connection/</link><pubDate>Wed, 18 Sep 2024 00:00:00 +0000</pubDate><guid>https://tinks.github.io/sample-docs-hugo/installation_guides/file_gateway/installation_process/test_network_connection/</guid><description>&lt;p&gt;In this stage, you must test the network connection to your S3 File Gateway.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Log into your virtual machine. A screen similar to the following is displayed:&lt;/p&gt;
+&lt;p&gt;&lt;img src="../../../../images/fdps_installation_login_vm.png" alt=""&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Enter the command to “Test Network Connectivity” and press Enter.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Select the “Public” endpoint type and press Enter.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Enter the AWS region, which you have received from your designated company representative, and press Enter.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;If the test is successful, continue with the procedure.
+&lt;img src="../../../../images/fdps_installation_test_network.png" alt=""&gt;&lt;/p&gt;</description></item><item><title>Installation process</title><link>https://tinks.github.io/sample-docs-hugo/installation_guides/live_tv_app/installation_process/</link><pubDate>Mon, 19 Aug 2024 00:00:00 +0000</pubDate><guid>https://tinks.github.io/sample-docs-hugo/installation_guides/live_tv_app/installation_process/</guid><description>&lt;div class="alert alert-primary" role="alert"&gt;
+
+
+ &lt;p&gt;Before you start, make sure the Android TV box is&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;connected to a screen,&lt;/li&gt;
+&lt;li&gt;connected to your network,&lt;/li&gt;
+&lt;li&gt;and connected to the network stream through its input port.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id="enable-usb-debugging-and-fetch-ip-address"&gt;Enable USB debugging and fetch IP address&lt;/h2&gt;
+&lt;p&gt;Although you connect to the Android TV box over your network, you must enable USB debugging on the Android TV box before you can install the Live TV app through the Android Debug Bridge (adb). Follow these instructions:&lt;/p&gt;</description></item><item><title>Authentication API</title><link>https://tinks.github.io/sample-docs-hugo/api/authentication/</link><pubDate>Sat, 19 Aug 2023 00:00:00 +0000</pubDate><guid>https://tinks.github.io/sample-docs-hugo/api/authentication/</guid><description>&lt;h2 id="bearer-token"&gt;Bearer token&lt;/h2&gt;
+&lt;p&gt;An API token is used to authenticate with all endpoints, except the Authentication API, where the API token is fetched from. Use your &lt;a href="https://tinks.github.io/sample-docs-hugo/api/base-url-service-user/#service-user"&gt;service account&lt;/a&gt; details to fetch the API token.&lt;/p&gt;
+&lt;p&gt;This API token is used as a Bearer token in the header of each API call.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-tsx" data-lang="tsx"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Headers:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#e78284"&gt;Authorization&lt;/span&gt;&lt;span style="color:#99d1db;font-weight:bold"&gt;:&lt;/span&gt; Bearer &amp;lt;&lt;span style="color:#ca9ee6"&gt;api&lt;/span&gt;&lt;span style="color:#e78284"&gt;-&lt;/span&gt;&lt;span style="color:#8caaee"&gt;token&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="api-token-payload-and-expiry"&gt;API token payload and expiry&lt;/h2&gt;
+
+
+&lt;div class="alert alert-primary" role="alert"&gt;
+
+
+ Cache the API token and only request a new one when the old one has either expired or is near expiry.
+
+&lt;/div&gt;
+
+&lt;p&gt;The API token returned from this API endpoint is a JSON Web Token (JWT) and contains an expiry time. This means that you are required to fetch a new API token when the previous one has expired before making calls to other endpoints which require an API token for authentication.&lt;/p&gt;</description></item><item><title>Configure and activate gateway</title><link>https://tinks.github.io/sample-docs-hugo/installation_guides/file_gateway/installation_process/activate_gateway/</link><pubDate>Wed, 18 Sep 2024 00:00:00 +0000</pubDate><guid>https://tinks.github.io/sample-docs-hugo/installation_guides/file_gateway/installation_process/activate_gateway/</guid><description>&lt;p&gt;In this stage, the S3 File Gateway is configured and activated. How this happens depends on whether or not the company is granted access to the virtual machine where you installed the S3 File Gateway.&lt;/p&gt;
+&lt;h2 id="the-company-can-have-access-to-vm"&gt;The company can have access to VM&lt;/h2&gt;
+&lt;p&gt;If you allow the company, even temporary, access to the virtual machine where you installed the S3 File Gateway, then the company can configure and activate the S3 File Gateway.&lt;/p&gt;</description></item><item><title>Troubleshooting</title><link>https://tinks.github.io/sample-docs-hugo/installation_guides/live_tv_app/troubleshooting/</link><pubDate>Mon, 19 Aug 2024 00:00:00 +0000</pubDate><guid>https://tinks.github.io/sample-docs-hugo/installation_guides/live_tv_app/troubleshooting/</guid><description>&lt;div class="alert alert-primary" role="alert"&gt;
+
+
+ Before you start troubleshooting the Android TV box and the app, the Android TV box must be connected to a screen.
+
+&lt;/div&gt;
+
+&lt;p&gt;When something happens to one of your Android TV boxes, it may be necessary to troubleshoot the device. This topic helps you troubleshoot the most common issues.&lt;/p&gt;
+&lt;h2 id="disconnected-cables"&gt;Disconnected cables&lt;/h2&gt;
+&lt;p&gt;&lt;img src="../../../images/live_tv_app_troubleshooting.png" alt=""&gt;&lt;/p&gt;
+&lt;h3 id="usb-to-rfdvb-c-cable-disconnected"&gt;USB to RF/DVB-C cable disconnected&lt;/h3&gt;
+&lt;p&gt;When the USB to RF/DVB-C cable is disconnected from the Android TV box (see connection 1 in the image), then the app loses the tuned channel, and an operator must re-tune the app to the correct channel.&lt;/p&gt;</description></item><item><title>API reference</title><link>https://tinks.github.io/sample-docs-hugo/api/client/client-api-ref/</link><pubDate>Sat, 19 Aug 2023 00:00:00 +0000</pubDate><guid>https://tinks.github.io/sample-docs-hugo/api/client/client-api-ref/</guid><description>&lt;p&gt;Try out the client account API on your staging environment.&lt;/p&gt;
+
+&lt;rapi-doc id='rapi-doc-el'
+ spec-url = '/sample-docs-hugo/api/v1/client/openapi.yaml'
+ show-info = 'false'
+ show-header = 'false'
+ render-style = 'view'
+ layout = 'column'
+ schema-description-expanded = 'true'
+ theme = 'light'
+ allow-spec-url-load = 'false'
+ allow-spec-file-load = 'false'
+ allow-spec-file-download = 'true'
+ primary-color = '#313C73'
+ persist-auth = 'true'
+ fetch-credentials = 'omit'
+ allow-try = 'true'
+ default-schema-tab = 'schema'
+ 
+ &gt;
+&lt;/rapi-doc&gt;</description></item></channel></rss>
