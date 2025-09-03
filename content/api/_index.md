@@ -9,7 +9,7 @@ menu:
     weight: 10
     pre: <i class='fas fa-file-code'></i>
 cascade:
-  - type: rapidoc
+  - type: docs
 ---
 
 The REST APIs are used to create an integration between your web application and your platform instance. This documentation contains the necessary information to get started:
