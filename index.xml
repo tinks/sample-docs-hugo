@@ -158,4 +158,5 @@
  default-schema-tab = 'schema'
  
  &gt;
-&lt;/rapi-doc&gt;</description></item></channel></rss>
+&lt;/rapi-doc&gt;
+&lt;script src="https://tinks.github.io/sample-docs-hugo/js/rapidoc-min.js"&gt;&lt;/script&gt;</description></item></channel></rss>
