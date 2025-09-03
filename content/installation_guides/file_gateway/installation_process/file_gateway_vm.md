@@ -3,7 +3,7 @@ title: "Install S3 File Gateway virtual machine"
 linkTitle: "Install S3 File Gateway virtual machine"
 description: ""
 date: 2024-09-18
-draft: true
+draft: false
 weight: 20
 ---
 

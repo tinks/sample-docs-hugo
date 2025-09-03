@@ -2,6 +2,9 @@ baseURL = "https://tinks.github.io/sample-docs-hugo/"
 title = "Sample documentation"
 # relativeURLs = true
 
+[outputs]
+  section = ["HTML","print"]
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.extensions]
@@ -62,7 +65,7 @@ title = "Sample documentation"
   [module.hugoVersion]
     extended = true
     max = ""
-    min = "0.107.0"
+    min = "0.148.0"
   [[module.imports]]
     path = "github.com/google/docsy"
   [[module.imports]]

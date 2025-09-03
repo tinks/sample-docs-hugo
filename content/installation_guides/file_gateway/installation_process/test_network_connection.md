@@ -3,7 +3,7 @@ title: "Test network connection"
 linkTitle: "Test network connection"
 description: ""
 date: 2024-09-18
-draft: true
+draft: false
 weight: 30
 ---
 

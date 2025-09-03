@@ -3,10 +3,10 @@ title: "Installation Guides"
 linkTitle: "Installation Guides"
 description: ""
 date: 2024-09-18
-draft: true
+draft: false
 menu:
   main:
-    weight: 10
+    weight: 20
     pre: <i class='fas fa-screwdriver-wrench'></i>
 cascade:
   - type: docs
