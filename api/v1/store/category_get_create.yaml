@@ -1,0 +1,35 @@
+post:
+  tags: 
+    - Category
+  summary: Create a category.
+  description: |
+    Create a category.
+  operationId: createCategory
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema: { $ref: schemas/category.yaml }
+  responses:
+    "200":
+      description: Created
+    "400":
+      description: Bad Request
+get:
+  tags:
+    - Category
+  summary: Get all categories
+  description: |
+    See all categories.
+  operationId: getCategories
+  responses:
+    "200":
+      description: Success
+      content:
+        application/json:
+          schema:
+            type: array
+            description: A list of all the categories you have created.
+            items: { $ref: schemas/category.yaml }
+    "400":
+      description: Bad Request

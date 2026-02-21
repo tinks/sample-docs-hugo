@@ -1,4 +1,35 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sample documentation</title><link>https://tinks.github.io/sample-docs-hugo/</link><description>Recent content on Sample documentation</description><generator>Hugo</generator><language>en</language><lastBuildDate>Wed, 18 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://tinks.github.io/sample-docs-hugo/index.xml" rel="self" type="application/rss+xml"/><item><title>Prerequisites</title><link>https://tinks.github.io/sample-docs-hugo/installation_guides/file_gateway/prerequisites/</link><pubDate>Wed, 18 Sep 2024 00:00:00 +0000</pubDate><guid>https://tinks.github.io/sample-docs-hugo/installation_guides/file_gateway/prerequisites/</guid><description>&lt;p&gt;Before you install the S3 File Gateway, make sure that the following prerequisites are met:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sample documentation on Documentation samples</title><link>https://tinks.github.io/sample-docs-hugo/</link><description>Recent content in Sample documentation on Documentation samples</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sat, 21 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://tinks.github.io/sample-docs-hugo/index.xml" rel="self" type="application/rss+xml"/><item><title>API model</title><link>https://tinks.github.io/sample-docs-hugo/api/store/store-api-model/</link><pubDate>Wed, 03 Sep 2025 00:00:00 +0000</pubDate><guid>https://tinks.github.io/sample-docs-hugo/api/store/store-api-model/</guid><description>&lt;pre class="mermaid"&gt;classDiagram
+ class Store {
+ UUID id
+ String name
+ blob logo
+ }
+ class Category {
+ UUID id
+ String name
+ }
+ Category &amp;lt;|-- Subcategory
+ Subcategory: UUID category_id
+ class Brand {
+ UUID id
+ String name
+ blob logo
+ }
+ class Apparel {
+ UUID id
+ UUID store_id
+ UUID category_id
+ UUID subcategory_id
+ UUID brand_id
+ String color
+ List~String~ sizes
+ String fabric
+ String description
+ }
+ Store *-- Apparel
+ Category -- Apparel
+ Subcategory -- Apparel
+ Brand -- Apparel&lt;/pre&gt;</description></item><item><title>Prerequisites</title><link>https://tinks.github.io/sample-docs-hugo/installation_guides/file_gateway/prerequisites/</link><pubDate>Wed, 18 Sep 2024 00:00:00 +0000</pubDate><guid>https://tinks.github.io/sample-docs-hugo/installation_guides/file_gateway/prerequisites/</guid><description>&lt;p&gt;Before you install the S3 File Gateway, make sure that the following prerequisites are met:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Microsoft Active Directory service account with the correct permissions. For more information, see &lt;a href="https://docs.aws.amazon.com/filegateway/latest/files3/ad-serviceaccount-permissions.html"&gt;Active Directory service account permission requirements - AWS Storage Gateway&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;One of the following hypervisors to deploy the virtual machine appliance:
@@ -49,7 +80,26 @@
 
 &lt;h2 id="build-the-base-url"&gt;Build the base URL&lt;/h2&gt;
 &lt;p&gt;Use your &lt;code&gt;platform_id&lt;/code&gt; to build up the base URL for all available REST API endpoints. See &lt;a href="https://tinks.github.io/sample-docs-hugo/api/base-url-service-user/#base-url"&gt;Base URL&lt;/a&gt; for more information.&lt;/p&gt;
-&lt;p&gt;For example, if your &lt;code&gt;platform_id&lt;/code&gt; is &lt;code&gt;my_company_platform_id&lt;/code&gt;, then the base URL for the REST API endpoints in your staging environment is &lt;code&gt;https://api.staging.my_company_platform_id.platform.io&lt;/code&gt;.&lt;/p&gt;</description></item><item><title>Install S3 File Gateway virtual machine</title><link>https://tinks.github.io/sample-docs-hugo/installation_guides/file_gateway/installation_process/file_gateway_vm/</link><pubDate>Wed, 18 Sep 2024 00:00:00 +0000</pubDate><guid>https://tinks.github.io/sample-docs-hugo/installation_guides/file_gateway/installation_process/file_gateway_vm/</guid><description>&lt;p&gt;In this stage, you request where to download the S3 File Gateway and install in your hypervisor.&lt;/p&gt;
+&lt;p&gt;For example, if your &lt;code&gt;platform_id&lt;/code&gt; is &lt;code&gt;my_company_platform_id&lt;/code&gt;, then the base URL for the REST API endpoints in your staging environment is &lt;code&gt;https://api.staging.my_company_platform_id.platform.io&lt;/code&gt;.&lt;/p&gt;</description></item><item><title>API reference</title><link>https://tinks.github.io/sample-docs-hugo/api/store/store-api-ref/</link><pubDate>Sat, 21 Feb 2026 00:00:00 +0000</pubDate><guid>https://tinks.github.io/sample-docs-hugo/api/store/store-api-ref/</guid><description>&lt;rapi-doc id='rapi-doc-el'
+ spec-url = '/sample-docs-hugo/api/v1/store/openapi.yaml'
+ show-info = 'false'
+ show-header = 'false'
+ render-style = 'view'
+ layout = 'column'
+ schema-description-expanded = 'true'
+ theme = 'light'
+ allow-spec-url-load = 'false'
+ allow-spec-file-load = 'false'
+ allow-spec-file-download = 'true'
+ primary-color = '#313C73'
+ persist-auth = 'true'
+ fetch-credentials = 'omit'
+ allow-try = 'true'
+ default-schema-tab = 'schema'
+ 
+ &gt;
+&lt;/rapi-doc&gt;
+&lt;script src="https://tinks.github.io/sample-docs-hugo/js/rapidoc-min.js"&gt;&lt;/script&gt;</description></item><item><title>Install S3 File Gateway virtual machine</title><link>https://tinks.github.io/sample-docs-hugo/installation_guides/file_gateway/installation_process/file_gateway_vm/</link><pubDate>Wed, 18 Sep 2024 00:00:00 +0000</pubDate><guid>https://tinks.github.io/sample-docs-hugo/installation_guides/file_gateway/installation_process/file_gateway_vm/</guid><description>&lt;p&gt;In this stage, you request where to download the S3 File Gateway and install in your hypervisor.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Contact your designated company representative, and request the &lt;strong&gt;URL to the file gateway&lt;/strong&gt; and the &lt;strong&gt;AWS region&lt;/strong&gt;. Provide the hypervisor you have with your request to receive the correct URL. Only the following hypervisors are supported:
 &lt;ul&gt;
@@ -113,7 +163,7 @@
 &lt;p&gt;Although you connect to the Android TV box over your network, you must enable USB debugging on the Android TV box before you can install the Live TV app through the Android Debug Bridge (adb). Follow these instructions:&lt;/p&gt;</description></item><item><title>Authentication API</title><link>https://tinks.github.io/sample-docs-hugo/api/authentication/</link><pubDate>Sat, 19 Aug 2023 00:00:00 +0000</pubDate><guid>https://tinks.github.io/sample-docs-hugo/api/authentication/</guid><description>&lt;h2 id="bearer-token"&gt;Bearer token&lt;/h2&gt;
 &lt;p&gt;An API token is used to authenticate with all endpoints, except the Authentication API, where the API token is fetched from. Use your &lt;a href="https://tinks.github.io/sample-docs-hugo/api/base-url-service-user/#service-user"&gt;service account&lt;/a&gt; details to fetch the API token.&lt;/p&gt;
 &lt;p&gt;This API token is used as a Bearer token in the header of each API call.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-tsx" data-lang="tsx"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Headers:
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-tsx" data-lang="tsx"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Headers:
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#e78284"&gt;Authorization&lt;/span&gt;&lt;span style="color:#99d1db;font-weight:bold"&gt;:&lt;/span&gt; Bearer &amp;lt;&lt;span style="color:#ca9ee6"&gt;api&lt;/span&gt;&lt;span style="color:#e78284"&gt;-&lt;/span&gt;&lt;span style="color:#8caaee"&gt;token&lt;/span&gt;&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="api-token-payload-and-expiry"&gt;API token payload and expiry&lt;/h2&gt;
 

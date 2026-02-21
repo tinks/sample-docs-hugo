@@ -1,0 +1,35 @@
+post:
+  tags: 
+    - Brand
+  summary: Create a brand.
+  description: |
+    Create a brand.
+  operationId: createBrand
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema: { $ref: schemas/brand.yaml }
+  responses:
+    "200":
+      description: Created
+    "400":
+      description: Bad Request
+get:
+  tags:
+    - Brand
+  summary: Get all brands
+  description: |
+    See all brands.
+  operationId: getBrands
+  responses:
+    "200":
+      description: Success
+      content:
+        application/json:
+          schema:
+            type: array
+            description: A list of all the brands you have created.
+            items: { $ref: schemas/brand.yaml }
+    "400":
+      description: Bad Request

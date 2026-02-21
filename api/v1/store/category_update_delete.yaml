@@ -1,0 +1,37 @@
+parameters:
+  - name: id
+    in: path
+    description: The category ID of the category you have created.
+    required: true
+    schema:
+      type: string
+      format: UUIDv4
+put:
+  tags:
+    - Category
+  summary: Update a category
+  description: |
+    Update the name of one of the categories you have created.
+  operationId: updateCategory
+  requestBody:
+    content:
+      application/json:
+        schema: { $ref: schemas/category.yaml }
+  responses:
+    "200":
+      description: Success
+    "400":
+      description: Bad Request
+delete:
+  tags:
+    - Category
+  summary: Delete a category
+  description: |
+    Delete a category. All linked subcategories are also deleted. 
+    The category and subcategory on apparel with this category is set to `NULL`.
+  operationId: deleteCategory
+  responses:
+    "200":
+      description: Success
+    "400":
+      description: Bad Request
