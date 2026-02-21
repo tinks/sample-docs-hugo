@@ -13,6 +13,8 @@ post:
   responses:
     "200":
       description: Created
+    "400":
+      description: Bad Request
 get:
   tags:
     - Apparel
@@ -29,3 +31,5 @@ get:
             type: array
             description: A list of all the apparel items you have created in the store.
             items: { $ref: schemas/apparel.yaml }
+    "400":
+      description: Bad Request

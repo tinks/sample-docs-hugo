@@ -20,6 +20,8 @@ put:
   responses:
     "200":
       description: Success
+    "400":
+      description: Bad Request
 delete:
   tags:
     - Brand
@@ -31,3 +33,5 @@ delete:
   responses:
     "200":
       description: Success
+    "400":
+      description: Bad Request

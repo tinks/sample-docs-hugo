@@ -5,6 +5,9 @@ info:
     url: https://tinks.github.io/sample-docs-hugo
     email: tinesaintghislain@gmail.com
   version: 1.0.0 #version of this document
+  license: 
+    name: Apache
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
   title: Store API
   description: |
     Create a store, categories, subcategories, and apparel to sell in your online store.

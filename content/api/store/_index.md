@@ -4,7 +4,9 @@ linkTitle: "Store"
 description: ""
 date: 2025-09-04
 draft: false
-weight: 10
+weight: 60
 ---
+
+I wrote an OpenAPI specification (v3.1) for a made-up REST API with which you could create a clothing store with categories, brands, and items.
 
 {{< rapi-doc src="api/v1/store/openapi.yaml" >}}

@@ -20,6 +20,8 @@ put:
   responses:
     "200":
       description: Success
+    "400":
+      description: Bad Request
 delete:
   tags:
     - Store
@@ -30,3 +32,5 @@ delete:
   responses:
     "200":
       description: Success
+    "400":
+      description: Bad Request

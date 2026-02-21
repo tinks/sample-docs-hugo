@@ -13,6 +13,8 @@ post:
   responses:
     "200":
       description: Created
+    "400":
+      description: Bad Request
 get:
   tags:
     - Brand
@@ -29,3 +31,5 @@ get:
             type: array
             description: A list of all the brands you have created.
             items: { $ref: schemas/brand.yaml }
+    "400":
+      description: Bad Request
