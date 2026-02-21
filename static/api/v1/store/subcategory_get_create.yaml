@@ -1,0 +1,43 @@
+parameters:
+  - name: id
+    in: path
+    description: The category ID for the category to which the subcategory is associated.
+    required: true
+    schema:
+      type: string
+      format: UUIDv4
+post:
+  tags: 
+    - Category
+  summary: Create a subcategory.
+  description: |
+    Create a subcategory linked to a category.
+  operationId: createSubcategory
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema: { $ref: schemas/subcategory.yaml }
+  responses:
+    "200":
+      description: Created
+    "400":
+      description: Bad Request
+get:
+  tags:
+    - Category
+  summary: Get all subcategories
+  description: |
+    See all subcategories associated with a category.
+  operationId: getSubcategories
+  responses:
+    "200":
+      description: Success
+      content:
+        application/json:
+          schema:
+            type: array
+            description: A list of all the subcategories you have created associated with the category.
+            items: { $ref: schemas/subcategory.yaml }
+    "400":
+      description: Bad Request

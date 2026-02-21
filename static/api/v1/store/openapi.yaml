@@ -1,0 +1,61 @@
+openapi: "3.1.1"
+info:
+  contact:
+    name: Tine Saint-Ghislain
+    url: https://tinks.github.io/sample-docs-hugo
+    email: tinesaintghislain@gmail.com
+  version: 1.0.0 #version of this document
+  license: 
+    name: Apache
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+  title: Store API
+  description: |
+    Create a store, categories, subcategories, and apparel to sell in your online store.
+tags:
+  - name: Store
+    description: Create and maintain your online apparel stores.
+  - name: Category
+    description: |
+      Create and maintain the apparel categories and subcategories.
+
+      Categories and subcategories are unique to your instance, but can be used across all of your stores.
+
+      Categories and subcategories can be associated with your apparel items.
+  - name: Brand
+    description: |
+      Create and maintain brands.
+
+      Brands are unique to your instance, but can be used across all of your stores.
+
+      Brands can be associated with your apparel items.
+  - name: Apparel
+    description: |
+      Create and maintain the items you are selling in your online stores.
+
+      Associate the categories, subcategories, and brands to your apparel items, allowing your customers to easily filter 
+      and search for the items they want to buy.
+servers:
+  - url: https://{subdomain}.platform.io
+    description: The URL for your staging environment.
+    variables:
+      subdomain:
+        default: 'company'
+        description: |
+          The `subdomain` provided to you during your customer onboarding process.
+security:
+  - Bearer: []
+components: 
+  securitySchemes:
+    Bearer: { $ref: ../bearer.yaml }
+paths:
+  /v1/store: { $ref: store_get_create.yaml }
+  /v1/store/{id}: { $ref: store_update_delete.yaml }
+  /v1/store/{id}/logo: { $ref: store_logo_update.yaml }
+  /v1/category: { $ref: category_get_create.yaml }
+  /v1/category/{id}: { $ref: category_update_delete.yaml }
+  /v1/category/{id}/subcateogry: { $ref: subcategory_get_create.yaml }
+  /v1/category/{id}/subcategory/{subcategory_id}: { $ref: subcategory_update_delete.yaml }
+  /v1/brand: { $ref: brand_get_create.yaml }
+  /v1/brand/{id}: { $ref: brand_update_delete.yaml }
+  /v1/brand/{id}/logo: { $ref: brand_logo_update.yaml }
+  /v1/apparel: { $ref: apparel_get_create.yaml }
