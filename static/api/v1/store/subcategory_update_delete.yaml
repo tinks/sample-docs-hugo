@@ -1,0 +1,40 @@
+parameters:
+  - name: id
+    in: path
+    description: The category ID for the category you have created.
+    required: true
+    schema:
+      type: string
+      format: UUIDv4
+  - name: subcategory_id
+    in: path
+    description: The subcategory ID of the subcategory you have created.
+    required: true
+    schema:
+      type: string
+      format: UUIDv4
+put:
+  tags:
+    - Category
+  summary: Update a subcategory
+  description: |
+    Update the name of one of the subcategory you have created.
+  operationId: updateSubcategory
+  requestBody:
+    content:
+      application/json:
+        schema: { $ref: schemas/subcategory.yaml }
+  responses:
+    "200":
+      description: Success
+delete:
+  tags:
+    - Category
+  summary: Delete a subcategory
+  description: |
+    Delete a subcategory. 
+    The subcategory on apparel with this subcategory is set to `NULL`.
+  operationId: deleteSubcategory
+  responses:
+    "200":
+      description: Success

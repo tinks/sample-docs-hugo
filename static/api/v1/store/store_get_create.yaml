@@ -1,0 +1,31 @@
+post:
+  tags: 
+    - Store
+  summary: Create a store
+  description: |
+    Create a new online store.
+  operationId: createStore
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema: { $ref: schemas/store.yaml }
+  responses:
+    "200":
+      description: Created
+get:
+  tags:
+    - Store
+  summary: Get all stores
+  description: |
+    See all stores you have created so far.
+  operationId: getStores
+  responses:
+    "200":
+      description: Success
+      content:
+        application/json:
+          schema:
+            type: array
+            description: A list of all the stores you have created.
+            items: { $ref: schemas/store.yaml }

@@ -1,0 +1,31 @@
+post:
+  tags: 
+    - Apparel
+  summary: Create an apparel item
+  description: |
+    Create an apparel item.
+  operationId: createApparel
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema: { $ref: schemas/apparel.yaml }
+  responses:
+    "200":
+      description: Created
+get:
+  tags:
+    - Apparel
+  summary: Get all apparel items
+  description: |
+    See all apparel items associated with the store.
+  operationId: getApparel
+  responses:
+    "200":
+      description: Success
+      content:
+        application/json:
+          schema:
+            type: array
+            description: A list of all the apparel items you have created in the store.
+            items: { $ref: schemas/apparel.yaml }

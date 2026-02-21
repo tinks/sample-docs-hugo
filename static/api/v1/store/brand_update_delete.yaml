@@ -1,0 +1,33 @@
+parameters:
+  - name: id
+    in: path
+    description: The brand ID of the brand you have created.
+    required: true
+    schema:
+      type: string
+      format: UUIDv4
+put:
+  tags:
+    - Brand
+  summary: Update a brand
+  description: |
+    Update the name of one of the brands you have created.
+  operationId: updateBrand
+  requestBody:
+    content:
+      application/json:
+        schema: { $ref: schemas/brand.yaml }
+  responses:
+    "200":
+      description: Success
+delete:
+  tags:
+    - Brand
+  summary: Delete a brand
+  description: |
+    Delete a brand. 
+    The brand on apparel with this brand is set to `NULL`.
+  operationId: deleteBrand
+  responses:
+    "200":
+      description: Success

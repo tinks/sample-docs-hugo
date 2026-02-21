@@ -1,0 +1,32 @@
+parameters:
+  - name: id
+    in: path
+    description: The store ID for the store you have created.
+    required: true
+    schema:
+      type: string
+      format: UUIDv4
+put:
+  tags:
+    - Store
+  summary: Update a store
+  description: |
+    Update the name of one of the stores you have created.
+  operationId: updateStore
+  requestBody:
+    content:
+      application/json:
+        schema: { $ref: schemas/store.yaml }
+  responses:
+    "200":
+      description: Success
+delete:
+  tags:
+    - Store
+  summary: Delete a store
+  description: |
+    Delete a store. All linked categories, subcategories and apparel are also deleted.
+  operationId: deleteStore
+  responses:
+    "200":
+      description: Success

@@ -1,5 +1,7 @@
+# baseURL = "/"
 baseURL = "https://tinks.github.io/sample-docs-hugo/"
-title = "Sample documentation"
+title = "Documentation samples"
+# uglyURLs = true
 # relativeURLs = true
 
 [outputs]
@@ -29,6 +31,7 @@ title = "Sample documentation"
   sidebar_menu_foldable = true
   navbar_logo = true
   sidebar_search_disable = true
+  showLightDarkModeMenu = true
 
 [params.links]
   [[params.links.user]]
